@@ -1,0 +1,260 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS solar system</title>
+    <style>
+      body{
+        background-image: url(./img/milkyway.avif);
+        background-repeat: no-repeat;
+      background-size: cover;
+      
+      }
+      .sun{
+        width: 120px;
+        height: 120px;
+      
+        border-radius: 120px;
+        background-color: rgb(255, 111, 0);
+        background-image: url("./img/sun.png");
+        background-size: cover;
+        margin: 500px auto ;
+        position: relative;
+        /* display: none; */
+      }
+      .mercury{
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+      border-radius: 50px;
+      background-image: url( "./img/mercury.png");
+    
+        background-size:cover;
+        position: absolute;
+        bottom: 20px;
+        right: -100px;
+        animation-name:mercury ;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform-origin: -90px center;
+        /* animation-play-state: paused; */
+
+      }
+      @keyframes mercury{
+       to{
+           transform :rotateZ(0deg);
+
+        }
+        from{
+          transform :rotateZ(-359deg);
+
+
+        }
+      }
+      .venus{
+        width: 70px;
+        height: 70px;
+        border-radius: 70px;
+        background-image: url("./img/venus.png");
+        background-size: cover;
+        position: absolute;
+        bottom: 20px;
+        /* top: 30px; */
+        right: -220px;
+        animation-name: venus;
+        animation-duration: 6s;
+        transform-origin: -170px center ;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /* animation-play-state: paused; */
+        /* display: none;
+       */
+
+      }
+      @keyframes venus {
+        0%{
+           transform :rotateZ(0deg);
+
+        }
+        100%{
+          transform :rotateZ(359deg);
+
+
+        }
+        
+      }
+      .earth{
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+        background-color: aquamarine;
+        background-image: url("./img/earth.png");
+        background-size: cover;
+        position: absolute;
+        bottom:10px;
+        right: -350px;
+        transform-origin:-258px center;
+        animation-name: earth;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation-play-state: paused; */
+      }
+      @keyframes earth {
+        to{
+          transform :rotateZ(0deg);
+
+
+        }
+        from{
+          transform :rotateZ(-359deg);
+
+
+        }
+        
+      }
+       .moon{
+        width: 20px;
+        height: 20px;
+        
+        border-radius: 20px;
+        position: absolute;
+        bottom: 30px;
+        right: -30px;
+        background: rgb(236,236,236);
+        animation-name:moon;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: -56px center;
+        /* animation-play-state: paused; */
+      }
+      @keyframes moon {
+        0%{
+         transform: rotateZ(0deg);
+
+        }
+        100%{
+          transform: rotateZ(359deg);
+
+        }
+      }
+      .mars{
+        
+        width: 75px;
+        height: 75px;
+        border-radius: 75px;
+        background-color: orangered;
+        background-image: url("./img/mars.png");
+        background-size: cover;
+        position: absolute;
+        bottom:10px;
+        right: -150px;
+        transform-origin:-400px center;
+        animation-name: mars;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation-play-state: paused; */
+      }
+      @keyframes mars {
+        to{
+          transform :rotateZ(0deg);
+
+
+        }
+        from{
+          transform :rotateZ(-359deg);
+
+
+        }
+        
+      }
+      .jupiter{ 
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: yellowgreen;
+        background-image: url("./img/jupitar.png");
+        background-size: cover;
+        position: absolute;
+        bottom:10px;
+        right: -630px;
+        transform-origin:-400px center;
+        animation-name: jupitar;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation-play-state: paused; */
+      }
+      @keyframes jupitar{
+        to{
+          transform :rotateZ(0deg);
+
+
+        }
+        from{
+          transform :rotateZ(-359deg);
+
+
+        }
+        
+      }
+      .saturn{
+        
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: slategrey;
+        background-image: url(./img/uranus.png);
+        background-size: cover;
+        position: absolute;
+        bottom:10px;
+        right: -740px;
+        transform-origin:-550px center;
+        animation-name: saturn;
+        animation-duration: 5.9s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation-play-state: paused; */
+      }
+      @keyframes saturn{
+        to{
+          transform :rotateZ(0deg);
+
+
+        }
+        from{
+          transform :rotateZ(-359deg);
+
+
+        }
+      }
+
+      
+    
+
+    </style>
+  </head>
+  <body>
+    <div class="sun">
+      <div class="mercury"></div>
+      <div class="venus"></div>
+      <div class="earth">
+        <div class="moon"></div>
+        <div class="mars"></div>
+       
+      </div>
+      <div class="jupiter"></div>
+      <div class="saturn"></div>
+
+
+      
+    </div>
+   
+    
+    
+  </body>
+  </html>
